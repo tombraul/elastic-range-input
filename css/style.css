@@ -1,0 +1,53 @@
+.range__wrapper {
+    user-select: none; /* disable user selection, for better drag'n'drop */
+}
+
+.range__input {
+    display: none; /* hide the actual input field */
+}
+
+/* position the svg root element */
+.range__slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* slider color */
+.range__slider__path {
+    fill: #FF4B81;
+}
+
+/* styles for marks */
+.range__marks__path {
+    fill: none;
+    stroke: inherit;
+    stroke-width: 1px;
+}
+
+/* stroke color for the "pink" marks */
+.range__marks__pink {
+    stroke: #FF4B81;
+}
+
+/* stroke color for the "white" marks */
+.range__marks__white {
+    stroke: white;
+}
+
+/* positioning the container for values, it will be translated with Javscript */
+.range__values {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+/* these "transform-origin" values will keep the numbers in the desired position as they are scaled */
+.range__value__number--top {
+    transform-origin: 100% 100%; /*bottom right corner*/
+}
+
+.range__value__number--bottom {
+    transform-origin: 100% 0; /* top-right corner */
+}

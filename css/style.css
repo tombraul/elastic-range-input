@@ -4,6 +4,13 @@ body {
   overflow: hidden;
 }
 
+.theme__picker {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 2;
+}
+
 .range__wrapper {
   position: absolute;
   left: 50%;

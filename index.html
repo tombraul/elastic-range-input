@@ -74,7 +74,18 @@
         </div>
     </div>
 
+    <div class="theme__picker">
+        <select name="theme__picker" id="selection" onchange="changeTheme(this.value);">
+            <option value="luxury-dark">Luxury Dark</option>
+            <option value="fluffy-light">Fluffy Light</option>
+            <option value="mono-chrom">Mono Chrom</option>
+            <option value="healthy-light">Healthy Light</option>
+            <option value="healthy-dark">Healthy Dark</option>
+        </select>
+    </div>
+
     <script src="js/anime.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/themer.js"></script>
 </body>
 </html>

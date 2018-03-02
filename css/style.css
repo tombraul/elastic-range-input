@@ -127,3 +127,22 @@ body {
 .range__value__text--bottom {
   margin-top: 10px;
 }
+
+/* remove defaults */
+.theme__picker > select {
+  border:none;
+  border-radius: 0;
+  font-size: 1em;
+  width: 100%
+}
+.theme__picker > select {
+  width:100%;
+  border: 1px solid #bbb;
+  padding:.75em 1em .5em 1em;
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2);
+  background-color:white;
+} 
+
+.theme__picker > select:hover {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+}

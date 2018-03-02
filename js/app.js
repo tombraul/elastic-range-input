@@ -84,13 +84,13 @@ function updateValue() {
     // calculate the scale for the value numbers
     scale = (rangeValue - rangeMin) / (rangeMax - rangeMin) * scaleMax;
     // update "input" value
-    rangeinput.value = rangeValue;
+    rangeInput.value = rangeValue;
     // update numbers values
     rangeValueNumberTop.innerText = max - rangeValue;
-    rangeValueNumberBottm.innerText = rangeValue;
+    rangeValueNumberBottom.innerText = rangeValue;
     rangeValues.style.transform = "translateY(" + (rangeHeight - currentY) + "px)";
     rangeValueNumberTop.style.transform = "scale(" + (1 - scale) + ")";
-    rangeValueNumberBottm.style.transform = "scale(" + (1 - (scaleMax - scale)) + ")";
+    rangeValueNumberBottom.style.transform = "scale(" + (1 - (scaleMax - scale)) + ")";
 
     if (Math.abs(mouseDy) < mouseDyLimit) {
     lastMouseDy = mouseDy;
@@ -110,7 +110,7 @@ function updateValue() {
 }
 
 function buildPath(dy, ty) {
-    return "M 0 " + ty + " q " + mouseX + " " + dy + " 320 0 1 0 480 1 -320 0 Z";
+    return "M 0 " + ty + " q " + mouseX + " " + dy + " 320 0 l 0 480 l -320 0 Z";
 }
 
 function elasticRelease() {
